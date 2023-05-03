@@ -1,0 +1,564 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css" integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <title>국립공원 Korea National Park</title>
+    <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+    <link
+    rel="stylesheet"
+    href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css"
+  />
+  <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+
+
+<style >
+
+  .swiper {
+    width: 100%;
+    height: 500px;
+  }
+
+
+  .swiper-slide {
+    text-align: center;
+    font-size: 18px;
+    background: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .swiper-slide img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+
+  .swiper-pagination-bullet-active{
+    background: rgb(193, 242, 97);
+  }
+
+   /* html을 가져올 때 core로 가져온게 아니라 element로 가져왔음. element는 왜 안되는 거였지? */
+
+
+
+    
+</style>
+
+</head>
+<body>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <!-- header section -->
+    <header class="header">
+        <a href="#" class="logo">
+            <img src="images/국립공원 logo 3.png" alt="">
+        </a>
+
+        <nav class="navbar">
+            <a href="#home">홈</a>
+            <a href="#about">국립공원소개</a>
+            <a href="#menu">국립공원22</a>
+            <a href="#products">사진전</a>
+            <a href="#review">인터뷰</a>
+            <a href="#contact">탐방예약</a>
+        </nav>
+
+        <div class="icons">
+            <div class="fas fa-search" id="search-btn"></div>
+            <div class="fa-regular fa-calendar-check" id="cart-btn"></div>
+            <div class="fas fa-bars" id="menu-btn"></div>
+        </div>
+
+        <div class="search-form">
+            <input type="search" id="search-box" placeholder="search here...">
+            <label for="serch-box" class="fas fa-search"></label>
+        </div>
+
+        <div class="cart-items-container">
+            
+            <div class="cart-item">
+                <span class="fas fa-plus"></span>
+                <img src="images/19040_입선_설악산_설악산 토왕성폭포_김건호_D.jpg" alt="">
+                <div class="content">
+                    <a href="https://www.knps.or.kr/front/portal/visit/visitCourseMain.do?parkId=120400&menuNo=7020093" target="blank"><h3>설악산 눈꽃투어</h3></a>
+                    <div class="price">1월 한정</div>
+                </div>
+            </div>
+
+            <div class="cart-item">
+                <span class="fas fa-plus"></span>
+                <img src="images/22064_입선_한라산_안개낀 소나무밭 풍경_현홍영.jpg" alt="">
+                <div class="content">
+                    <a href="http://www.jeju.go.kr/hallasan/index.htm" target="blank"><h3>한라산 일출산행</h3></a>
+                    <div class="price">매일 5:00 - 6:00</div>
+                </div>
+            </div>
+
+            <div class="cart-item">
+                <span class="fas fa-plus"></span>
+                <img src="images/22053_입선_월악산_제비봉가는길_박정식.jpg" alt="">
+                <div class="content">
+                    <a href="https://www.knps.or.kr/front/portal/visit/visitCourseMain.do?parkId=121400&menuNo=7020097" target="blank"><h3>월악산 제비봉 투어</h3></a>
+                    <div class="price">매주 금,토,일</div>
+                </div>
+            </div>
+
+
+            <a href="#" class="btn">예약하기</a>
+
+        </div>
+
+    </header>
+    <!-- header section end -->
+
+    <!-- home section start -->
+    <section class="home" id="home">
+
+        <div  data-aos="fade-up"
+        data-aos-duration="1000" class="content">
+            <h3> 대한민국 국립공원</h3>
+            <p><span>Lorem ipsum dolor sit amet consectetur adipisicing elit.</span>
+                <span>Quisquam asperiores non saepe cupiditate iste similique?</span>
+                 <span>Sunt nesciunt tempore rem dignissimos odio,</span>
+                 <span>debitis quisquam repellendus odit maiores</span>
+                 <span>sit sapiente placeat incidunt! </span>
+                </p>
+        </div>
+
+    </section>
+    <!-- home section end -->
+
+    
+    <!-- about section start -->
+    <section class="about" id="about">    
+        <div class="h_padding"></div>
+        <h1 class="heading"><span>국립공원</span> 소개</h1>
+
+    <div class="swiper mySwiper">
+
+     <div class="swiper-wrapper">
+
+      <swiper-slide>
+        <div class="row ">
+            <div class="image">
+                <img src="images/22050_입선_속리산_문장대의 찬란한 아침_심달영.jpg" alt="">
+            </div>
+            <div class="content">
+                <h3>what makes our coffee special?</h3>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Non pariatur corrupti dolorum. Laboriosam, dolores enim quo alias accusamus ratione aperiam cumque omnis sunt facere dolor, aspernatur voluptas velit voluptates ad.</p>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus, soluta? Voluptatum accusantium, voluptatem illum non, magni itaque sit necessitatibus saepe impedit sunt iusto laborum veniam in explicabo officia. Omnis, ducimus!</p>
+                <a href="#" class="btn">learn more</a>
+            </div>
+        </div>
+      </swiper-slide>
+
+      <swiper-slide>
+        <div class="row ">
+            <div class="image">
+                <img src="images/19031_입선_소백산_소백산의 아름다운 풍경_방춘성_D.jpg" alt="">
+            </div>
+            <div class="content">
+                <h3>what makes our coffee special?</h3>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Non pariatur corrupti dolorum. Laboriosam, dolores enim quo alias accusamus ratione aperiam cumque omnis sunt facere dolor, aspernatur voluptas velit voluptates ad.</p>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus, soluta? Voluptatum accusantium, voluptatem illum non, magni itaque sit necessitatibus saepe impedit sunt iusto laborum veniam in explicabo officia. Omnis, ducimus!</p>
+                <a href="#" class="btn">learn more</a>
+            </div>
+        </div>
+      </swiper-slide>
+
+      <swiper-slide>
+        <div class="row ">
+            <div class="image">
+                <img src="images/20050_입선_경주_감은사지 별궤적_노명유_D.jpg" alt="">
+            </div>
+            <div class="content">
+                <h3>what makes our coffee special?</h3>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Non pariatur corrupti dolorum. Laboriosam, dolores enim quo alias accusamus ratione aperiam cumque omnis sunt facere dolor, aspernatur voluptas velit voluptates ad.</p>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus, soluta? Voluptatum accusantium, voluptatem illum non, magni itaque sit necessitatibus saepe impedit sunt iusto laborum veniam in explicabo officia. Omnis, ducimus!</p>
+                <a href="#" class="btn">learn more</a>
+            </div>
+        </div>
+      </swiper-slide>
+
+     </div>
+
+      <div class="swiper-pagination"></div>
+    
+    </div>
+
+        
+
+
+
+
+    </section>
+    <!-- about section end -->
+
+
+    <!-- menu section start -->
+    <section class="menu" id="menu">
+        <div class="h_padding"></div>
+        <h1 class="heading">우리나라 <span>국립공원 22</span></h1>
+
+        <div class="box-container">
+
+
+            <div class="box" id="park01">
+                <a href="https://www.knps.or.kr/front/portal/visit/visitCourseMain.do?parkId=120700&menuNo=7020084" target="_blank" class="btn22"><h3>가야산</h3></a>
+                <!-- <div class="price">$15.99 <span>20.99</span></div> -->
+            </div>
+            
+            <div class="box" id="park02">
+                <a href="https://www.knps.or.kr/front/portal/visit/visitCourseMain.do?parkId=121900&menuNo=7020085" target="blank" class="btn22"><h3>경주</h3></a>
+                <!-- <div class="price">$15.99 <span>20.99</span></div> -->
+            </div>
+            
+            <div class="box" id="park03">
+                <a href="https://www.knps.or.kr/front/portal/visit/visitCourseMain.do?parkId=120200&menuNo=7020086" target="blank" class="btn22"><h3>계룡산</h3></a>
+                <!-- <div class="price">$15.99 <span>20.99</span></div> -->
+            </div>
+            
+            <div class="box" id="park04">
+                <a href="https://www.knps.or.kr/front/portal/visit/visitCourseMain.do?parkId=120600&menuNo=7020087" target="blank" class="btn22"><h3>내장산</h3></a>
+                <!-- <div class="price">$15.99 <span>20.99</span></div> -->
+            </div>
+            
+            <div class="box" id="park05">
+                <a href="https://www.knps.or.kr/front/portal/visit/visitCourseMain.do?parkId=121200&menuNo=7020088" target="blank" class="btn22"><h3>다도해<br>해상</h3></a>
+                <!-- <div class="price">$15.99 <span>20.99</span></div> -->
+            </div>
+            
+            <div class="box" id="park06">
+                <a href="https://www.knps.or.kr/front/portal/visit/visitCourseMain.do?parkId=120800&menuNo=7020089" target="blank" class="btn22"><h3>덕유산</h3></a>
+                <!-- <div class="price">$15.99 <span>20.99</span></div> -->
+            </div>
+            
+            <div class="box" id="park07">
+                <a href="https://www.knps.or.kr/front/portal/visit/visitCourseMain.do?parkId=122000&menuNo=7020090" target="blank" class="btn22"><h3>무등산</h3></a>
+                <!-- <div class="price">$15.99 <span>20.99</span></div> -->
+            </div>
+            
+            <div class="box" id="park08">
+                <a href="https://www.knps.or.kr/front/portal/visit/visitCourseMain.do?parkId=121800&menuNo=7020091" target="blank" class="btn22"><h3>변산반도</h3></a>
+                <!-- <div class="price">$15.99 <span>20.99</span></div> -->
+            </div>
+            
+            <div class="box" id="park09">
+                <a href="https://www.knps.or.kr/front/portal/visit/visitCourseMain.do?parkId=121500&menuNo=7020092" target="blank" class="btn22"><h3>북한산</h3></a>
+                <!-- <div class="price">$15.99 <span>20.99</span></div> -->
+            </div>
+            
+            <div class="box" id="park10">
+                <a href="https://www.knps.or.kr/front/portal/visit/visitCourseMain.do?parkId=120400&menuNo=7020093" target="blank" class="btn22"><h3>설악산</h3></a>
+                <!-- <div class="price">$15.99 <span>20.99</span></div> -->
+            </div>
+            
+            
+            <div class="box" id="park11">
+                <a href="https://www.knps.or.kr/front/portal/visit/visitCourseMain.do?parkId=121600&menuNo=7020094" target="blank" class="btn22"><h3>소백산</h3></a>
+                <!-- <div class="price">$15.99 <span>20.99</span></div> -->
+            </div>
+            
+            <div class="box" id="park12">
+                <a href="https://www.knps.or.kr/front/portal/visit/visitCourseMain.do?parkId=120500&menuNo=7020095" target="blank" class="btn22"><h3>속리산</h3></a>
+                <!-- <div class="price">$15.99 <span>20.99</span></div> -->
+            </div>
+            
+            <div class="box" id="park13">
+                <a href="https://www.knps.or.kr/front/portal/visit/visitCourseMain.do?parkId=120900&menuNo=7020096" target="blank" class="btn22"><h3>오대산</h3></a>
+                <!-- <div class="price">$15.99 <span>20.99</span></div> -->
+            </div>
+            
+            <div class="box" id="park14">
+                <a href="https://www.knps.or.kr/front/portal/visit/visitCourseMain.do?parkId=121400&menuNo=7020097" target="blank" class="btn22"><h3>월악산</h3></a>
+                <!-- <div class="price">$15.99 <span>20.99</span></div> -->
+            </div>
+            
+            <div class="box" id="park15">
+                <a href="https://www.knps.or.kr/front/portal/visit/visitCourseMain.do?parkId=121700&menuNo=7020098" target="blank" class="btn22"><h3>월출산</h3></a>
+                <!-- <div class="price">$15.99 <span>20.99</span></div> -->
+            </div>
+            
+            <div class="box" id="park16">
+                <a href="https://www.knps.or.kr/front/portal/visit/visitCourseMain.do?parkId=121000&menuNo=7020099" target="blank" class="btn22"><h3>주왕산</h3></a>
+                <!-- <div class="price">$15.99 <span>20.99</span></div> -->
+            </div>
+            
+            <div class="box" id="park17">
+                <a href="https://www.knps.or.kr/front/portal/visit/visitCourseMain.do?parkId=121000&menuNo=7020099" target="blank" class="btn22"><h3>지리산</h3></a>
+                <!-- <div class="price">$15.99 <span>20.99</span></div> -->
+            </div>
+            
+            <div class="box" id="park18">
+                <a href="https://www.knps.or.kr/front/portal/visit/visitCourseMain.do?parkId=121300&menuNo=7020101" target="blank" class="btn22"><h3>치악산</h3></a>
+                <!-- <div class="price">$15.99 <span>20.99</span></div> -->
+            </div>
+            
+            <div class="box" id="park19">
+                <a href="https://www.knps.or.kr/front/portal/visit/visitCourseMain.do?parkId=122200&menuNo=8000275" target="blank" class="btn22"><h3>태백산</h3></a>
+                <!-- <div class="price">$15.99 <span>20.99</span></div> -->
+            </div>
+            
+            <div class="box" id="park20">
+                <a href="https://www.knps.or.kr/front/portal/visit/visitCourseMain.do?parkId=121100&menuNo=7020102" target="blank" class="btn22"><h3>태안해안</h3></a>
+                <!-- <div class="price">$15.99 <span>20.99</span></div> -->
+            </div>
+            
+            <div class="box" id="park21">
+                <a href="https://www.knps.or.kr/front/portal/visit/visitCourseMain.do?parkId=120300&menuNo=7020103" target="blank" class="btn22"><h3>한려해상</h3></a>
+                <!-- <div class="price">$15.99 <span>20.99</span></div> -->
+            </div>
+            
+            <div class="box" id="park22">
+                <a href="http://www.jeju.go.kr/hallasan/index.htm" target="blank" class="btn22"><h3>한라산</h3></a>
+                <!-- <div class="price">$15.99 <span>20.99</span></div> -->
+            </div>
+            
+
+             
+
+
+        </div>
+
+    </section>
+    <!-- menu section end -->
+
+
+    <!-- products section start -->
+    <section class="products" id="products">
+        <div class="h_padding"></div>
+        <h1 class="heading">국립공원 <span>사진전</span></h1>
+        <div class="box-container">
+
+            <div class="box">
+                <div data-aos="flip-left"
+                data-aos-easing="ease-out-cubic"
+                data-aos-duration="1000" class="image">
+                    <img src="images/22013_장려_치악산_물결처름 흐르는 능선_마병권.jpg" alt="">
+                </div>
+                <div class="content">
+                    <h3>물결처럼 흐르는 능선</h3>
+                    <div class="price">홍길동 作 <br><span>치악산</span></div>
+                    <div class="stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star-half-alt"></i>
+                    </div>
+                </div>
+                <div class="icons">
+                    <a href="#" class="fas fa-heart"></a>
+                    <a href="#" class="fas fa-comment"></a>
+                    <a href="#" class="fas fa-share"></a>
+                </div>
+            </div>
+
+            <div class="box">
+                <div data-aos="flip-left"
+                data-aos-easing="ease-out-cubic"
+                data-aos-duration="1000" class="image">
+                    <img src="images/21035_입선_소백산_하늘과 나의 길_오해문.jpg" alt="">
+                </div>
+                <div class="content">
+                    <h3>하늘과 나의 길</h3>
+                    <div class="price">홍길동 作 <br><span>소백산</span></div>
+                    <div class="stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star-half-alt"></i>
+                    </div>
+                </div>
+                <div class="icons">
+                    <a href="#" class="fas fa-heart"></a>
+                    <a href="#" class="fas fa-comment"></a>
+                    <a href="#" class="fas fa-share"></a>
+                </div>
+            </div>
+
+            <div class="box">
+                <div data-aos="flip-left"
+                data-aos-easing="ease-out-cubic"
+                data-aos-duration="1000" class="image">
+                    <img src="images/22053_입선_월악산_제비봉가는길_박정식.jpg" alt="">
+                </div>
+                <div class="content">
+                    <h3>제비봉 가는 길</h3>
+                    <div class="price">홍길동 作 <br><span>월악산</span></div>
+                    <div class="stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star-half-alt"></i>
+                    </div>
+                </div>
+                <div class="icons">
+                    <a href="#" class="fas fa-heart"></a>
+                    <a href="#" class="fas fa-comment"></a>
+                    <a href="#" class="fas fa-share"></a>
+                </div>
+            </div>
+
+        
+            
+
+        </div>
+
+    </section>
+    <!-- products section end -->
+
+
+    <!-- review section start -->
+    <section class="review" id="review">
+        <div class="h_padding"></div>
+        <h1 class="heading"> 국립공원의 <span>사람들</span></h1>
+        
+        <div class="box-container">
+            <div class="box">
+                <img src="images/quote-img.png" alt="" class="quote">
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis porro ipsa eveniet in libero esse ipsum soluta error id architecto laborum nihil molestiae sint sapiente ullam, iure non quas molestias?</p>
+                <img src="images/pic-1.png" alt="" class="user">
+                <h3>john deo</h3>
+                <div class="icons">
+                    <a href="#" class="fas fa-heart"></a>
+                    <a href="#" class="fas fa-comment"></a>
+                    <a href="#" class="fas fa-share"></a>
+                </div>
+            </div>
+
+            <div class="box">
+                <img src="images/quote-img.png" alt="" class="quote">
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis porro ipsa eveniet in libero esse ipsum soluta error id architecto laborum nihil molestiae sint sapiente ullam, iure non quas molestias?</p>
+                <img src="images/pic-2.png" alt="" class="user">
+                <h3>john deo</h3>
+                <div class="icons">
+                    <a href="#" class="fas fa-heart"></a>
+                    <a href="#" class="fas fa-comment"></a>
+                    <a href="#" class="fas fa-share"></a>
+                </div>
+            </div>
+
+            <div class="box">
+                <img src="images/quote-img.png" alt="" class="quote">
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis porro ipsa eveniet in libero esse ipsum soluta error id architecto laborum nihil molestiae sint sapiente ullam, iure non quas molestias?</p>
+                <img src="images/pic-3.png" alt="" class="user">
+                <h3>john deo</h3>
+                <div class="icons">
+                    <a href="#" class="fas fa-heart"></a>
+                    <a href="#" class="fas fa-comment"></a>
+                    <a href="#" class="fas fa-share"></a>
+                </div>
+            </div>
+
+
+        </div>
+    </section>
+    <!-- review section end -->
+
+
+    <!-- contact section start -->
+
+    <section class="contact" id="contact">
+        <div class="h_padding"></div>
+        <h1 class="heading"> 국립공원 <span>탐방예약</span></h1>
+        <div class="row">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d126697.55726054443!2d126.53704307322454!3d33.439924813477305!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x350cf8ef4964d803%3A0x5966e3341f70475e!2z7ZWc65287IKwIOq1reumveqzteybkA!5e0!3m2!1sko!2skr!4v1679375592269!5m2!1sko!2skr" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            <form action="">
+                <h3>입력 후 예약전송</h3>
+                
+                <div class="inputBox">
+                    <span class="fas fa-user"></span>
+                    <input type="text" placeholder="이름">
+                </div>
+
+                <div class="inputBox">
+                    <span class="fas fa-envelope"></span>
+                    <input type="email" placeholder="메일주소">
+                </div>
+
+                <div class="inputBox">
+                    <span class="fas fa-phone"></span>
+                    <input type="number" placeholder="전화번호">
+                </div>
+
+                <input type="submit" value="예약전송" class="btn">
+
+            </form>
+        </div>
+
+
+    </section>
+
+    <!-- contact section end -->
+
+
+
+
+
+
+    <!-- footer section start -->
+    <section class="footer">
+
+        <div class="share">
+            <a href="#" class="fab fa-facebook-f"></a>
+            <a href="#" class="fab fa-twitter"></a>
+            <a href="#" class="fab fa-instagram"></a>
+            <a href="#" class="fab fa-linkedin"></a>
+            <a href="#" class="fab fa-pinterest"></a>
+        </div>
+
+        <div class="links">
+            <a href="#home">홈</a>
+            <a href="#about">국립공원소개</a>
+            <a href="#menu">국립공원22</a>
+            <a href="#products">사진전</a>
+            <a href="#review">인터뷰</a>
+            <a href="#contact">탐방예약</a>
+        </div>
+
+        <div class="credit">
+            created by <span>mr.web designer</span> | all rights reserved
+        </div>
+
+    </section>
+    <!-- footer section end -->
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+    <script>
+        var swiper = new Swiper(".mySwiper", {
+          direction: "vertical",
+          slidesPerView: 1,
+          spaceBetween: 30,
+          mousewheel: true,
+          pagination: {
+            el: ".swiper-pagination",
+            clickable: true,
+          },
+        });
+      </script>
+    <script>
+        AOS.init();
+    </script>
+    <script src="js/script.js"></script>
+
+
+ 
+
+
+    
+
+
+</body>
+</html>

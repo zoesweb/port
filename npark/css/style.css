@@ -1,0 +1,911 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600&family=Roboto:wght@100;300;400;500;700&family=Source+Sans+Pro:wght@300;400;600;700&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Noto+Serif+KR:wght@400;500;600;700&display=swap');
+
+
+
+
+
+
+
+:root{
+    --main-color: #09562a;
+    --black: #13131a;
+    --bg: #ffffff;
+    --border: .1rem solid rgba(255, 2555, 255, .3);
+
+}
+
+
+*{
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    outline: none;
+    border: none;
+    text-decoration: none;
+    text-transform: capitalize;
+    transition: .2s linear;
+}
+
+
+
+html{
+    font-size: 62.5%;
+    overflow-x: hidden ;
+    scroll-padding-top: 9rem;
+    scroll-behavior: smooth;
+}
+
+html::-webkit-scrollbar{
+    width: .8rem;
+}
+
+html::-webkit-scrollbar-track{
+    background: transparent;
+}
+
+html::-webkit-scrollbar-thumb{
+    background: var(--main-color);
+    border-radius: 5rem;
+}
+
+body{
+    background: var(--bg);
+}
+
+section{
+    padding: 1rem 7%;
+}
+
+/* .h_padding{
+    margin: 1rem;
+} */
+
+.heading{
+    text-align: center;
+    color: #000000;
+    text-transform: uppercase;
+    padding: 7.5rem;
+    font-size: 4rem;
+}
+
+.heading span{
+    text-transform: uppercase;
+    color: var(--main-color);
+}
+
+.header{
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1.5rem 7%;
+    border-bottom: var(--border);
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+    background: #fff;
+}
+
+.header .logo img{
+    height: 6rem;
+}
+
+.header .navbar a{
+    font-family: 'Noto Serif KR', serif;
+    margin: 0 2rem;
+    color: #09562a;
+    font-size: 1.8rem;
+    font-weight: bold;
+}
+
+
+.header .navbar a:hover{
+    color: var(--main-color);
+    font-weight: bold;
+    border-bottom: .1rem solid var(--main-color);
+    padding-bottom: .5rem;
+}
+
+.header .icons div{
+    color: #09562a;
+    font-size: 2.5rem;
+    margin-left: 2rem;
+    cursor: pointer;
+}
+
+.header .icons div:hover{
+    color: var(--main-color);
+}
+
+#menu-btn{
+    display: none;
+}
+
+.btn{
+    margin-top: 1rem;
+    display: inline-block;
+    padding: .9rem 3rem;
+    font-size: 1.7rem;
+    color: #fff;
+    background: var(--main-color);
+    cursor: pointer;
+}
+
+.btn:hover{
+    letter-spacing: .2rem;
+}
+
+.header .search-form{
+    position: absolute;
+    top: 115%;
+    right: 7%;
+    background: #fff;
+    width: 50rem;
+    height: 5rem;
+    display: flex;
+    align-items: center;
+    transform: scaleY(0);
+    transform-origin: top;
+}
+
+.header .search-form.active{
+    transform: scaleY(1);
+}
+
+.header .search-form input{
+    height: 100%;
+    width: 100%;
+    font-size: 1.6rem;
+    color: var(--black);
+    padding: 1rem;
+    text-transform: none;
+}
+
+.header .search-form label{
+    cursor: pointer;
+    color: var(--black);
+    font-size: 2.2rem;
+    margin-right: 1.5rem;
+}
+
+.header .search-form label:hover{
+    color: var(--main-color);
+}
+
+.header .cart-items-container{
+    position: absolute;
+    top: 100%;
+    right: -100%;
+    height: calc(100vh - 9.5rem);
+    background: #fff;
+    padding: 0 1.5rem;
+    width: 35rem;
+}
+
+.header .cart-items-container.active{
+    right: 0;
+}
+
+.header .cart-items-container .cart-item{
+    position: relative;
+    margin: 2rem 0;
+    display: flex;
+    align-items: center;
+    color: var(--black);
+    gap: 1.5rem;
+}
+
+.header .cart-items-container .cart-item .fa-plus{
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    font-size: 2rem;
+    cursor: pointer;
+    color: var(--main-color);
+}
+.header .cart-items-container .cart-item .fa-plus:hover{
+    color: yellowgreen;
+}
+
+.header .cart-items-container .cart-item img{
+    height: 5rem;
+}
+
+.header .cart-items-container .cart-item .content h3{
+    font-size: 1.5rem;
+    color: var(--main-color);
+    padding-bottom: .5rem;
+}
+
+.header .cart-items-container .cart-item .content h3:hover{
+    scale: 1.05;
+    cursor: pointer;
+    transition: .05s;
+}
+
+.header .cart-items-container .cart-item .content .price{
+    font-size: 1.5rem;
+    color: var(--main-color);
+}
+
+.header .cart-items-container .btn{
+    width: 100%;
+    text-align: center
+}
+
+
+/* header end */
+
+/* home start */
+
+.home{
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    background: url(../images/22064_입선_한라산_안개낀\ 소나무밭\ 풍경_현홍영.jpg);
+    background-size: cover;
+    background-position: center;
+}
+
+.home .content{
+    max-width: 150rem;
+    /* margin: 0 auto;*/
+    padding-top: 37%;
+    align-items: center;
+    text-align: center; 
+}
+
+.home .content h3{
+    font-size: 8rem;
+    color: #fff;
+    text-transform: uppercase;
+    font-family: 'Noto Serif KR', serif;
+    font-weight: 600;
+}
+
+.home .content p{
+    font-size: 2rem;
+    font-weight: lighter;
+    color: #fff;
+    line-height: 1.8;
+    padding: 1rem 0;
+}
+
+.about .row{
+    display: flex;
+    align-items: center;
+    background: var(--main-color);
+    flex-wrap: wrap;
+}
+
+.about .row .image{
+    flex: 1 1 45rem;
+}
+
+.about .row .image img{
+    width: 100%;
+}
+
+.about .row .content{
+    flex: 1 1 45rem;
+    padding: 2rem;
+}
+.about .row .content h3{
+    font-size: 3rem;
+    color: #fff;
+}
+
+.about .row .content p{
+    font-size: 1.6rem;
+    color: #ccc; 
+    padding: 1rem 0;
+    line-height: 1.8;
+}
+
+
+/* menu start */
+
+.menu .box-container{
+    /* display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(35rem, 1fr)); */
+    gap: 1.5rem;
+    /* background: #fff2c0; */
+    position: relative;
+    height: 110rem;
+    background: url(../images/국립공원지도.png) no-repeat ;
+    background-size: 80rem;
+    background-position: 50% 10%;
+
+}
+
+.menu .box-container .box{
+    /* padding: 5rem; */
+    /* text-align: center; */
+    border-radius: 50%;
+    height: 8rem;
+    width: 8rem;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    border: #fff solid;
+}
+
+.menu .box-container .box img{
+    height: 8rem;
+    width: 8rem;
+    border-radius: 50%;
+}
+
+/* .menu .box-container .box a{
+    color: #fff;
+    background: url(../images/13023_가야산_가야산운해_서정철_d.jpg) ;
+    background-size: cover;  
+} */
+
+/* .menu .box-container .box img:hover{
+    scale: 1.1;
+    transition: .1s;
+} */
+
+
+.menu .box-container .box h3{
+    color: var(--bg);
+    text-align: center;
+    font-size: 1.5rem;
+    background: rgba(13, 85, 20, 0.8);
+    padding: 2.9rem 0;
+}
+
+.menu .box-container .box h3:hover{
+    background: none;
+}
+
+/* .menu .box-container .box .price{
+    color: #000000;
+    font-size: 2.5rem;
+    padding: 0.5rem 0;
+} */
+
+/* .menu .box-container .box .price span{
+    font-size: 1.5rem ;
+    text-decoration: line-through;
+    font-weight: lighter;
+) */
+
+.menu .box-container .box:hover{
+    /* background: #527e32;  */
+    scale: 1.6;
+    transition: .6s;
+    
+}
+
+
+/* .menu .box-container .box:hover > *{
+    color: var(--black);
+} */
+
+/* ★★★hover에 버튼이 아니라 사진을 크게 */
+
+
+#park01{
+    background: url(../images/13023_가야산_가야산운해_서정철_d.jpg) no-repeat;
+    background-size: cover;
+    position: absolute;
+    top: 56rem;
+    right: 43%;
+}
+
+#park02{
+    position: absolute;
+    background: url(../images/20050_입선_경주_감은사지\ 별궤적_노명유_D.jpg) no-repeat;
+    background-size: cover;
+    top: 62rem;
+    right: 35%;
+}
+
+#park03{
+    position: absolute;
+    background: url(../images/21036_입선_계룡산_동학사\ 계곡의\ 아침_황현하.jpg) no-repeat;
+    background-size: cover;
+    top: 50rem;
+    right: 63%;
+}
+
+#park04{
+    position: absolute;
+    background: url(../images/22004_우수_내장산_백양사\ 가는\ 길_신원금.jpg) no-repeat;
+    background-size: cover;
+    top: 64rem;
+    right: 57%;
+}
+
+#park05{
+    position: absolute;
+    background: url(../images/09042_다도해해상_홍도유채꽃과독립문바위_이훈.jpg) no-repeat;
+    background-size: cover;
+    top: 77rem;
+    right: 48%;
+}
+
+#park05 h3{
+    padding: 2.0rem 0;
+}
+
+#park06{
+    position: absolute;
+    background: url(../images/17026_덕유산_설화_김석철_D.jpg) no-repeat;
+    background-size: cover;
+    top: 50rem;
+    right: 53%;
+}
+
+#park07{
+    position: absolute;
+    background: url(../images/13005_무등산_무등산산너울_박진호_f.jpg) no-repeat;
+    background-size: cover;    
+    top: 74rem;
+    right: 67%;
+}
+
+#park08{
+    position: absolute;
+    background: url(../images/20031_입선_변산반도_샤스타데이지의\ 일몰_홍미진_D.jpg) no-repeat;
+    background-size: cover;   
+    top: 62rem;
+    right: 65%;
+}
+
+#park09{
+    position: absolute;
+    background: url(../images/21008_장려_북한산_북한산\ 해넘이_조창섭.jpg) no-repeat;
+    background-size: cover;   
+    top: 15rem;
+    right: 60%;
+}
+
+#park10{
+    position: absolute;
+    background: url(../images/19040_입선_설악산_설악산\ 토왕성폭포_김건호_D.jpg) no-repeat;
+    background-size: cover;   
+    top: 5rem;
+    right: 45%;
+}
+
+#park11{
+    position: absolute;
+    background: url(../images/19031_입선_소백산_소백산의\ 아름다운\ 풍경_방춘성_D.jpg) no-repeat;
+    background-size: cover; 
+    top: 32rem;
+    right: 46%;
+}
+
+#park12{
+    position: absolute;
+    background: url(../images/15080_속리산_산천_신용인_D.jpg) no-repeat;
+    background-size: cover; 
+    top: 39rem;
+    right: 53%;
+}
+
+#park13{
+    position: absolute;
+    background: url(../images/08052_오대산_단풍.jpg) no-repeat;
+    background-size: cover; 
+    top: 15rem;
+    right: 40%;
+}
+
+#park14{
+    position: absolute;
+    background: url(../images/16063_입선_월악산_제비\ 날개에\ 내린\ 가을_윤진호_d.jpg) no-repeat;
+    background-size: cover; 
+    top: 26rem;
+    right: 52%;
+}
+
+#park15{
+    position: absolute;
+    background: url(../images/21049_입선_월출산_월출산\ 천황봉_김원철.jpg) no-repeat;
+    background-size: cover; 
+    top: 87rem;
+    right: 66%;
+}
+
+#park16{
+    position: absolute;
+    background: url(../images/11007_우수상_주왕산_반영_고수경.jpg) no-repeat;
+    background-size: cover; 
+    top: 45rem;
+    right: 39%;
+}
+
+#park17{
+    position: absolute;
+    background: url(../images/21026_입선_지리산_작은고리봉에서\ 성삼재를\ 바라보는\ 뷰_김나영.jpg) no-repeat;
+    background-size: cover; 
+    top: 64rem;
+    right: 49%;
+}
+
+#park18{
+    position: absolute;
+    background: url(../images/22013_장려_치악산_물결처름\ 흐르는\ 능선_마병권.jpg) no-repeat;
+    background-size: cover; 
+    top: 14rem;
+    right: 50%;
+}
+
+#park19{
+    position: absolute;
+    background: url(../images/22058_입선_태백산_망경대의\ 새벽불심_황윤철.jpg) no-repeat;
+    background-size: cover; 
+    top: 25rem;
+    right: 40%;
+}
+
+#park20{
+    position: absolute;
+    background: url(../images/22061_입선_태안해안_동심이\ 꿈꾸는\ 갯벌_정규진.jpg) no-repeat;
+    background-size: cover; 
+    top: 31rem;
+    right: 66%;
+}
+
+#park21{
+    position: absolute;
+    background: url(../images/20005_우수_한려해상_참나리와\ 대소병대도_우정순_D.jpg) no-repeat;
+    background-size: cover; 
+    top: 70rem;
+    right: 41%;
+}
+
+#park22{
+    position: absolute;
+    background: url(../images/16049_입선_한라산_백록담\ 가는\ 길_윤홍_d.jpg) no-repeat;
+    background-size: cover; 
+    top: 100rem;
+    right: 64%;
+}
+
+
+
+
+
+/* products start */
+
+.products .box-container{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
+    gap: 1.5rem;
+}
+
+.products .box-container .box{
+    padding: 2rem;
+    text-align: center;
+    border: var(--border);    
+}
+
+.products .box-container .box .icons a{
+    width: 5rem;
+    width: 5rem;
+    line-height: 5rem;
+    font-size: 2rem;
+    border: var(--border);
+    color:var(--main-color) ;
+    margin: 0.3rem;
+}
+
+.products .box-container .box .icons a:hover{
+    color: rgb(192, 2, 2);
+}
+
+.products .box-container .box .image{
+    padding: 2.5rem 0 ;
+}
+
+.products .box-container .box .image img{
+    height: 20rem;
+    width: 35rem;
+}
+
+.products .box-container .box .content h3{
+    color: #000000;
+    font-size: 2.5rem;
+}
+
+.products .box-container .box .content .stars{
+   padding: 1.5rem; 
+}
+
+.products .box-container .box .content .stars i{
+    color: var(--main-color);
+    font-size: 1.7rem;
+}
+
+.products .box-container .box .content .price{
+    color: #000000;
+    font-size: 2.5rem;
+}
+
+.products .box-container .box .content .price span{
+    /* text-decoration: line-through; */
+    font-size: 1.5rem;
+    font-weight: lighter;
+}
+
+
+/* review start */
+
+.review .box-container{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
+    gap: 1.5rem;
+}
+
+.review .box-container .box{
+    padding: 3rem 2rem;
+    text-align: center;
+    border: var(--border);
+}
+
+.review .box-container .box .quote{
+    padding: 2.5rem 0 ;
+}
+
+.review .box-container .box h3{
+    color: var(--main-color);
+    padding: 1rem 0;
+    font-size: 2rem;
+}
+
+.review .box-container .box p{
+    color: var(--main-color);
+    font-size: 1.5rem;
+    line-height: 1.5;
+    padding: 2rem 0;
+}
+
+.review .box-container .box .user{
+    height: 7rem;
+    width: 7rem;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+
+ .review .box-container .box .icons a{
+    width: 5rem;
+    width: 5rem;
+    line-height: 5rem;
+    font-size: 2rem;
+    border: var(--border);
+    color:var(--main-color) ;
+    margin: 0.3rem;
+}
+
+.review .box-container .box .icons a:hover{
+    color: rgb(192, 2, 2);
+}
+ 
+
+
+/* contact start */
+
+.contact .row{
+    display: flex;
+    background: #fff1b2;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+.contact .row .map{
+    flex: 1 1 45rem;
+    width: 100%;
+    object-fit: cover;
+}
+
+.contact .row form{
+    flex: 1 1 45rem;
+    padding: 5rem 2rem;
+    text-align: center;
+}
+
+.contact .row form h3{
+    text-transform: uppercase;
+    color: var(--main-color);
+    font-size: 3.5rem;
+}
+
+.contact .row form .inputBox{
+    display: flex;
+    align-items: center;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+    background: var(--bg);
+    border: var(--border);
+}
+
+.contact .row form .inputBox span{
+    color: var(--main-color);
+    font-size: 2rem;
+    padding-left: 2rem;
+
+}
+
+.contact .row form .inputBox input{
+    width: 100%;
+    padding: 2rem;
+    font-size: 1.7rem;
+    color: var(--main-color);
+    background: none;
+}
+
+
+
+
+
+
+/*footer start*/
+
+.footer{
+    background: var(--black);
+    text-align: center;
+    margin-top: 20rem;
+}
+
+.footer .share {
+    padding: 1rem 0;
+}
+
+.footer .share a{
+    height: 5rem;
+    width: 5rem;
+    font-size: 2rem;
+    color: #fff;
+    line-height: 5rem;
+    border: var(--border);
+    margin: 0.3rem;
+    border-radius: 50%;
+}
+
+.footer .share a:hover{
+    background-color: var(--main-color);
+}
+
+.footer .links {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    padding: 2rem 0;
+    gap: 1rem;
+}
+
+.footer .links a{
+    color: #fff;
+    border: var(--border);
+    font-size: 2rem;
+    padding: 0.7rem 2rem;
+} 
+
+.footer .links a:hover{
+    background-color: var(--main-color);
+}
+
+.footer .credit{
+    font-size: 2rem;
+    color: #fff;
+    padding: 1.5rem;
+    font-weight: lighter;
+}
+
+/* .footer .credit span{
+    
+} */
+
+
+
+/* media queries (반응형) */
+
+@media (max-width:991px){
+
+    html{
+        font-size: 55%;
+    }
+
+    .header{
+        padding: 1.5rem 2rem;
+    }
+
+    section{
+        padding: 3rem;
+    }
+}
+
+@media (max-width:768px){
+
+    #menu-btn{
+        display: inline-block;
+    }
+
+    .header .navbar{
+        position: absolute;
+        top: 100%;
+        right: -100%;
+        background: #fff;
+        width: 30rem;
+        height:calc(100vh - 9.5rem);
+    }
+/* 
+    section span{
+        display: block;
+
+    } */
+
+    .header .navbar a{
+        color: var(--main-color);
+        display: block;
+        margin: 1.5rem;
+        padding: .5rem;
+        font-size: 2rem;
+    }
+
+    .header .navbar.active{
+        right: 0;
+    }
+        
+    .home{
+        background-position: left;
+        justify-content: center;
+        text-align: center;
+    }
+
+    .home .content h3{
+        font-size: 4.5rem;
+    }
+
+    .home .content p{
+        font-size: 1.5rem;                
+    }
+    /* .home .content p span{
+        display: block;
+                
+    } */
+/* 
+    .menu .box-container{
+        scale: .8;
+    }
+
+    .menu .box-container .box{
+        scale: .8;
+    } */
+}
+
+
+@media (max-width:450px){
+
+    html{
+        font-size: 50%;
+    }
+
+    /* .search-form.active{
+        width: 80%;
+    }
+
+    .home .content h3{
+        
+    }
+
+    .home .content p span{
+        display: block;
+    } */
+
+
+
+}
+
+

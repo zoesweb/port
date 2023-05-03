@@ -1,0 +1,381 @@
+@import url('https://fonts.googleapis.com/css2?family=Commissioner:wght@400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Berkshire+Swash&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root{
+    --background-color: rgb(218, 237, 228);
+    --text-color: rgb(129, 70, 63);
+}
+
+body{
+    width: 1900px;
+    margin: 0 auto;
+    background-color: var(--background-color)
+}
+
+.header{
+    background: rgba(218, 237, 228, 0.8);
+    align-items: center;
+    justify-content: space-between;
+    padding: 1.5rem 1%;
+    position: fixed;
+    top: 0;
+    left: 0; right: 0;
+
+}
+
+.nav{
+    /* position: fixed;
+    background: rgba(218, 237, 228, 0.8);
+    width: 1900px; */
+}
+
+.nav_wrapper{
+    /*position: fixed;
+    background: rgba(218, 237, 228, 0.8);
+    width: 1900px; */
+    display: flex;
+    /*background: rgba(218, 237, 228, 0.5) */
+}
+
+
+.container{
+    display:inline-flex;
+    align-items: center;
+    margin: 0rem 15%;
+    padding: 1rem;
+    /*padding-left: 10rem; */
+}
+
+.menu{
+    width: 75rem;
+}
+
+.menu li{
+    display: inline-block;
+    align-items: center;
+    padding-right: 3rem;
+    padding-left: 6rem;
+    font-family: 'Commissioner', sans-serif;
+    color: var(--text-color);
+    font-weight: 900;
+    font-size: 1.5rem;
+}
+
+a{
+    text-decoration: none;
+}
+
+a:link{
+    color: var(--text-color)
+}
+
+a:visited{
+    color: var(--text-color)
+}
+
+.row-wrapper{
+    margin: 2rem auto 8rem auto;
+    padding: 3rem 10rem;
+    display: flex;
+    align-items: center;
+}
+
+
+.mentor{
+    background: url(../images/천배경.png) no-repeat center;
+    background-size: cover;
+}
+
+.row{
+    width: 48rem;
+    /* margin: 1.5rem auto; */
+    display: inline;
+    text-align: center;
+}
+
+.mentor .row p{
+    font-size: 3rem;
+}
+
+.row img{
+
+}
+
+.row p{
+    text-align: center;
+    color: rgb(129, 70, 63);
+    padding-top: 1rem;
+    font-size: x-large;
+    font-weight: bold;
+}
+
+.row h1{
+    text-align: center;
+    color: rgb(129, 70, 63);
+    padding-top: 1rem;
+}
+
+.row h2{
+    text-align: center;
+    color: rgb(129, 70, 63);
+    padding-top: 1rem;
+}
+
+.title{
+    margin-top: 3rem;
+    padding-top: 9rem;
+    font-family: 'Berkshire Swash', cursive;
+    text-align: center;
+    font-size: 5rem;
+    color: var(--text-color);
+}
+
+
+/* table css */
+
+table {
+    margin: 7rem auto 3rem auto;
+    border: 1px #a39485 solid;
+    font-size: 1.5rem;
+    box-shadow: 0 2px 5px rgba(0,0,0,.25);
+    width: 80%;
+    border-collapse: collapse;
+    border-radius: 5px;
+    overflow: hidden;
+  }
+  
+thead th {
+    text-align: center;
+    color: #fff;
+  }
+
+th {
+    text-align: center;
+    color: #665d53;
+  }
+    
+thead {
+    font-weight: bold;
+    color: #fff;
+    background: #73685d;
+  }
+    
+   td, th {
+    padding: 1em .5em;
+    vertical-align: middle;
+  }
+    
+   td {
+    border-bottom: 1px solid rgba(0,0,0,.1);
+    text-align: center;
+    /* background: #fff; */
+  }
+
+ 
+/* check box  */
+
+#classR{
+    margin: 1rem 45% 5rem 45% ;
+    border: 0;
+    line-height: 2.5;
+    padding: 5px 10px;
+    width: 15rem;
+    font-family: 'Berkshire Swash', cursive;
+    font-size: 1.5rem;
+    text-align: center;
+    color: #534141;
+    border-radius: 20px;
+    background-color: rgb(255, 255, 255);
+    box-shadow: inset 2px 2px 3px rgba(255, 255, 255, 0.6), inset -2px -2px 3px rgba(0, 0, 0, 0.6);
+}    
+    
+#classR:hover {
+    background-color: #665d53;
+    color: #fff;
+}
+    
+#classR:active {
+    box-shadow: inset -2px -2px 3px rgba(255, 255, 255, 0.6), inset 2px 2px 3px rgba(0, 0, 0, 0.6);
+}
+
+
+
+/* reservation */
+
+form{
+    margin: 5rem 33% 2rem ;
+    background: linear-gradient(90deg, rgba(255,255,255,0) 15%, rgba(255,255,255,1) 49%, rgba(255,255,255,0) 90%);
+    width: 35%;
+    flex: 1 1 45rem;
+    padding: 5rem 2rem;
+    text-align: center;
+}
+
+.inputBox{
+    display: flex;
+    align-items: center;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+    background: var(--bg);
+    border: var(--border);
+}
+
+
+.inputBox span{
+    color: var(--main-color);
+    font-size: 2rem;
+    padding-left: 2rem;
+
+}
+
+.inputBox input{
+    width: 100%;
+    padding: 2rem;
+    font-size: 1.7rem;
+    color: var(--main-color);
+    background: none;
+}
+
+
+
+.reservation {
+    margin: 2rem 45% 5rem 45% ;
+    border: 0;
+    line-height: 2.5;
+    padding: 10px 20px;
+    font-family: 'Berkshire Swash', cursive;
+    font-size: 2rem;
+    text-align: center;
+    color: #534141;
+    /* text-shadow: 1px 1px 1px #000; */
+    border-radius: 20px;
+    background-color: rgb(255, 255, 255);
+    /* background-image: linear-gradient(to top left, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2) 30%, rgba(0, 0, 0, 0)); */
+    box-shadow: inset 2px 2px 3px rgba(255, 255, 255, 0.6), inset -2px -2px 3px rgba(0, 0, 0, 0.6);
+}
+
+.reservation:hover {
+    background-color: #665d53;
+    color: #fff;
+}
+
+.reservation:active {
+    box-shadow: inset -2px -2px 3px rgba(255, 255, 255, 0.6), inset 2px 2px 3px rgba(0, 0, 0, 0.6);
+}
+
+ 
+
+/* gallery */
+
+.swiper {
+    margin: 11rem auto;
+    width: 100%;
+    height: 33rem;
+  }
+
+  .swiper-slide {
+    text-align: center;
+    font-size: 18px;
+    /* background: rgba(255, 255, 255, 0.5); */
+    background: linear-gradient(90deg, rgba(255,255,255,0) 15%, rgba(255,255,255,1) 49%, rgba(255,255,255,0) 90%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .swiper-slide img {
+    /* display: block; */
+    width: 80%;
+    height: 100%;
+    object-fit:none;
+  }
+  
+  .swiper-pagination{
+    margin: .5rem;
+  }
+
+  
+
+
+/* Contact */
+
+.box{
+    display: flex;
+    text-align: center;
+}
+
+
+.box p{
+    margin: 3rem 4rem;
+    font-family: 'Commissioner', sans-serif;
+    font-size: 2rem;
+    width: 35%;
+}
+
+.box a{
+    text-decoration: none;
+    margin: 3rem 4em;
+    font-family: 'Commissioner', sans-serif;
+    font-weight: 500;
+    font-size: 2rem;
+    color: #665d53;
+    width: 65%;
+}
+
+#insta {
+    width: 10rem;
+}
+
+
+
+@media screen and (min-width:769px){
+    #webimg{
+        display: block;
+    }
+    
+    #mobimg{
+        display: none;
+    }
+}
+
+@media screen and (max-width: 768px){
+    html{
+      width: 50%;
+    }
+
+    .row-wrapper{
+        display: block;
+    }
+
+    #mainlogo{
+        margin-top: 3rem;
+    }
+
+    #webimg{
+        display: none;
+    }
+
+    #mobimg{
+        display: block ;
+    }
+
+
+    .header{
+        display: none;
+    }
+
+    .menu li{
+        display: block;
+    }
+
+
+
+}
+
+
